@@ -1,16 +1,31 @@
-def roll_call_dwarves# code an argument here
-  # Your code here
+def roll_call_dwarves(array)# code an argument here
+  array.each_with_index do
+    |character, index| p "#{index + 1} #{character}"
+  end 
 end
 
-def summon_captain_planet# code an argument here
-  # Your code here
+# roll_call_dwarves(["Tom", "Jerry"])
+
+
+def summon_captain_planet(array)
+  p array.collect {|call| "#{call.capitalize}!"}
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+# cat_calls = ["eat", "sleep", "drink", "meow"]
+# summon_captain_planet(cat_calls)
+
+def long_planeteer_calls(array)
+  p array.any? {|word| word.length > 4}
+  
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+# test_one = ["mails", "pop"]
+# long_planeteer_calls(test_one)
+
+def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
+  array.find {|snack| cheese_types.include?(snack)}
 end
+
+# yummy = ["hummus", "pretzels", "gouda"]
+# find_the_cheese(yummy)
